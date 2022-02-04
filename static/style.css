@@ -1,0 +1,289 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;700;900&display=swap");
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: cornsilk;
+    font-family: "Archivo", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+#logo {
+    align-self: flex-start;
+}
+img {
+    filter: invert(1);
+    height: 43px;
+}
+#navbar {
+    position: relative;
+    z-index: 11;
+    padding: 5px 15px;
+    background-color: black;
+    width: 100%;
+    display: flex;
+}
+#navbar ul {
+    align-self: center;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-right: 100px;
+}
+#navbar li {
+    list-style: none;
+}
+#navbar li a {
+    text-decoration: none;
+    padding: 0px 32px;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: 200ms all ease;
+}
+#navbar li a:hover {
+    color: rgb(125, 23, 46);
+    text-decoration: underline;
+}
+#intro {
+    position: relative;
+    height: 94vh;
+}
+#intro p {
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: cornsilk;
+    text-align: center;
+    padding-top: 95px;
+}
+#intro::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    background: url(/static/images/intro2.jpg) no-repeat;
+    /* background-position-y: center; */
+    /* background-position-x: center; */
+    background-size: cover;
+    /* opacity: 0.92; */
+}
+#danceStyles {
+    position: relative;
+    height: 450px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+#danceStyles > div:nth-child(1) {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.cardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6rem;
+    width: 100%;
+    height: 100%;
+}
+.cardContainer > div {
+    position: relative;
+    width: 20%;
+    height: 90%;
+    border: 4px solid transparent;
+    border-radius: 20px;
+    background: linear-gradient(to right, white, white),
+        linear-gradient(to right, #a3132b, #240b36);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.cardContainer > div:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    background-image: url("/static/images/indianDance.jpg");
+    background-size: cover;
+    opacity: 0.9;
+}
+.cardContainer > div:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    background-image: url("/static/images/westerDance.jpg");
+    background-position-y: center;
+    background-size: cover;
+    opacity: 0.9;
+}
+.cardContainer > div:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    background-image: url("/static/images/hiphopDance.jpg");
+    background-position-y: center;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+#plan {
+    position: relative;
+    height: 700px;
+    background-color: rgb(0, 0, 0);
+}
+#plan-container {
+    display: grid;
+    flex-direction: column;
+    height: inherit;
+    grid-template-rows: 0.4fr 2fr;
+}
+#heading {
+    font-size: 3rem;
+    height: fit-content;
+    align-self: end;
+}
+#heading p {
+    text-align: center;
+    font-weight: 700;
+}
+#plan-cards {
+    display: flex;
+    flex-direction: row;
+    height: 85%;
+    justify-content: center;
+    align-items: flex-end;
+}
+#card1 {
+    margin-right: 27px;
+    display: grid;
+    height: 75%;
+    width: 44%;
+    border-radius: 20px;
+    background-color: rgb(227, 227, 227);
+    grid-template-rows: 1fr 0.4fr 1fr 1fr;
+}
+#monthlyPlan {
+    font-size: 2rem;
+    font-weight: 900;
+    align-self: center;
+    padding-left: 23px;
+    color: black !important;
+}
+.perMonth {
+    display: flex;
+    padding-left: 23px;
+    max-height: fit-content;
+}
+.perMonth > div:nth-child(2) {
+    align-self: end;
+    padding-bottom: 10px;
+    font-weight: 400;
+    color: black !important;
+}
+.boldDollor {
+    margin-top: auto;
+    font-size: 3rem;
+    font-weight: 900;
+    color: black !important;
+}
+.billedText {
+    padding-left: 23px;
+    align-self: center;
+    font-weight: 400;
+    color: black !important;
+}
+.btn1 {
+    font-weight: 900;
+    width: 92%;
+    align-self: baseline;
+    justify-self: center;
+    height: 60%;
+    color: black !important;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    transition: 200ms all ease;
+}
+.btn1:hover {
+    background-color: rgb(54, 119, 243);
+    color: white !important;
+}
+#card2 {
+    border-radius: 20px;
+    display: grid;
+    flex-direction: column;
+    grid-template-rows: 0.7fr 0.8fr 0.8fr 1fr 1fr;
+    height: 90%;
+    width: 44%;
+    background-color: rgb(214, 248, 225);
+}
+#bestValue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(157, 238, 179);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#bestValue > p {
+    height: inherit;
+    font-weight: 700;
+    color: rgb(68, 134, 82) !important;
+}
+.btn2 {
+    font-weight: 900;
+    width: 92%;
+    align-self: baseline;
+    justify-self: center;
+    height: 60%;
+    color: white !important;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(54, 119, 243);
+    transition: 200ms all ease;
+}
+.btn2:hover {
+    color: black !important;
+    background-color: rgb(157, 238, 179);
+}
+#annualPlan {
+    font-size: 2rem;
+    font-weight: 900;
+    align-self: center;
+    padding-left: 23px;
+    color: black !important;
+}
+#footer {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    font-weight: 200;
+    text-align: center;
+}

@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    title STEEZY Studio
+    style
+      include ../static/style.css
+  body(href="/")
+    nav#navbar
+        div#logo
+        img(src="/static/images/logo.jpg", alt="logo")
+        ul 
+            li #[a(href="/") HOME]
+            li #[a(href="/") STYLES]
+            li #[a(href="/") PRICING]
+            li #[a(href="/") REVIEWS]
+            li #[a(href="/") CONTACT US]
+
+    section#intro 
+        p REACH YOUR DANCE GOALS
+    section#danceStyles 
+        div STYLES 
+        div.cardContainer  
+            div.gradient-border Indian 
+            div.gradient-border Western 
+            div.gradient-border Hip-Hop
+    section#plan 
+        div#plan-container  
+            div#heading 
+                p Choose Your Plan
+            div#plan-cards 
+                div#card1 
+                    div#monthlyPlan 
+                        |MONTHLY PLAN
+                    div.perMonth 
+                        div.boldDollor $20
+                        div /Month
+                    div.billedText
+                        |$20 billed monthly
+                    button.btn1 START FREE 7 DAY TRIAL
+                div#card2 
+                    div#bestValue 
+                       p  Best value (save 42%)
+                    div#annualPlan.green 
+                        |ANNUAL PLAN 
+                    div.perMonth.green 
+                        div.boldDollor $8.33
+                        div /Month 
+                    div.billedText.green 
+                        |$100 billed annually
+                    button.btn2  START FREE 7 DAY TRIAL
+    footer#footer  
+        | Copyright © 2021 steezystudio.com | All rights reserved
+
+    script
+      include ../static/index.js

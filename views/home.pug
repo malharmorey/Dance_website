@@ -1,0 +1,43 @@
+extends base.pug
+
+block scripts
+  script(src=' ../static/index.js')
+
+block style 
+    style
+      include ../static/style.css
+
+block content 
+    section#intro 
+        p REACH YOUR DANCE GOALS
+    section#danceStyles 
+        div STYLES 
+        div.cardContainer  
+            div.gradient-border Indian 
+            div.gradient-border Western 
+            div.gradient-border Hip-Hop
+    section#plan 
+        div#plan-container  
+            div#heading 
+                p Choose Your Plan
+            div#plan-cards 
+                div#card1 
+                    div#monthlyPlan 
+                        |MONTHLY PLAN
+                    div.perMonth 
+                        div.boldDollor $20
+                        div /Month
+                    div.billedText
+                        |$20 billed monthly
+                    button.btn1 START FREE 7 DAY TRIAL
+                div#card2 
+                    div#bestValue 
+                       p  Best value (save 42%)
+                    div#annualPlan.green 
+                        |ANNUAL PLAN 
+                    div.perMonth.green 
+                        div.boldDollor $8.33
+                        div /Month 
+                    div.billedText.green 
+                        |$100 billed annually
+                    button.btn2  START FREE 7 DAY TRIAL
